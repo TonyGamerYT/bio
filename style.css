@@ -1,0 +1,214 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0d0e12; /* Fundo preto/grafite profundo ultra moderno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Bloco Principal Superior */
+.profile-card {
+    background-color: #16181f; /* Cor do Card (cinza bem escuro) */
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    gap: 50px;
+    border: 1px solid #222531; /* Borda sutil para dar profundidade */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Lado Esquerdo do Perfil */
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Estilização da Foto de Perfil */
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    color: #ffffff; /* Texto do título agora é branco puro */
+    font-weight: 700;
+}
+
+.profile-info p {
+    color: #abb2bf; /* Texto descritivo em cinza claro para leitura confortável */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.contact-box {
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.contact-box span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #00ff87; /* Detalhe em verde neon para chamar atenção */
+}
+
+/* Lado Direito (Botões) */
+.links-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    background-color: #20232b; /* Botões escuros integrados ao layout */
+    border: 1px solid #2d313e;
+    border-radius: 16px;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.link-btn:hover {
+    transform: translateY(-2px);
+    background-color: #282c37;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão do WhatsApp em Grande Destaque */
+.merch-btn {
+    background-color: #25d366; /* Verde oficial do WhatsApp */
+    border-color: #20ba5a;
+    color: #ffffff;
+}
+
+.merch-btn .btn-subtitle {
+    color: #e0f9e8; /* Subtítulo do Whats em tom claro legível */
+}
+
+.merch-btn:hover {
+    background-color: #21be5b;
+}
+
+.btn-icon {
+    font-size: 1.4rem;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-subtitle {
+    font-size: 0.75rem;
+    color: #828a9e;
+    margin-top: 2px;
+}
+
+/* Seção de Cards Inferiores */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #16181f; /* Card escuro igual ao superior */
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #222531;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    opacity: 0.9; /* Suaviza um pouco as imagens no tema escuro */
+}
+
+.post-card h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.post-card p {
+    font-size: 0.85rem;
+    color: #abb2bf;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (Celulares e Tablets)
+   ========================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        padding: 24px;
+        gap: 30px;
+    }
+
+    .profile-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-box {
+        margin-top: 10px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; 
+        gap: 16px;
+    }
+    
+    .card-img {
+        height: 180px;
+    }
+}
